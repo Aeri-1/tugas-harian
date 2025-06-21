@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TUGAS HARIAN</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel = "icon" type="jpg" href="gambar.jpg" />
+</head>
+<body>
+  <div id="error-container" style="display: none; position: fixed; top: 20px; right: 20px; padding: 15px; background-color: #ffebee; color: #c62828; border: 1px solid #ef9a9a; border-radius: 4px; z-index: 1000;"></div>
+  <div class="container">
+    <h1 class="judul">To-Do List</h1>
+
+    <!-- Form input tugas -->
+    <form id="form-tugas" class="form">
+      <!-- Input judul tugas -->
+      <label for="input-judul">Nama Task</label>
+      <input type="text" id="input-judul" placeholder="Tambahkan Task Baru" required />
+
+      <!-- Pilihan kategori -->
+      <label for="input-kategori">Kategori</label>
+      <select id="input-kategori" required>
+        <option disabled selected>-- Pilih Kategori --</option>
+        <option value="biasa">Biasa</option>
+        <option value="prioritas">Prioritas</option>
+      </select>
+
+      <!-- Input tanggal -->
+      <label for="input-tanggal">Tanggal</label>
+      <input type="date" id="input-tanggal" required />
+
+      <!-- Tombol submit -->
+      <button type="submit" id="btn-tambah">➕ Tambah</button>
+    </form>
+    <!-- Form Edit Tugas (akan ditampilkan saat tombol edit diklik) -->
+    <form id="form-edit" class="form" style="display: none; margin-top: 20px;">
+      <h2>Edit Task</h2>
+      <input type="hidden" id="edit-index" />
+      
+      <label for="edit-judul">Nama Task</label>
+      <input type="text" id="edit-judul" required />
+
+      <label for="edit-kategori">Kategori</label>
+      <select id="edit-kategori" required>
+        <option value="biasa">Biasa</option>
+        <option value="prioritas">Prioritas</option>
+      </select>
+      <label for="edit-tanggal">Tanggal</label>
+      <input type="date" id="edit-tanggal" required />
+
+      <button type="submit" id="btn-simpan-edit">💾 Simpan Perubahan</button>
+    </form>
+    <!-- Tabel untuk menampilkan daftar tugas -->
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Task</th>
+          <th>Kategori</th>
+          <th>Tanggal</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tabel-tugas"></tbody>
+    </table>
+
+  <!-- Import JavaScript -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>

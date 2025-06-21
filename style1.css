@@ -1,0 +1,167 @@
+/* Gaya dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Kontainer utama */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Judul */
+.judul {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form input tugas */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input dan select */
+input, select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Tombol tambah */
+button#btn-tambah {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button#btn-tambah:hover {
+  background-color: #0056b3;
+}
+
+/* Tabel tugas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Tugas yang sudah selesai dicoret */
+td.task-selesai {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Badge kategori dan status */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+}
+
+.badge.biasa {
+  background-color: #17a2b8;
+}
+
+.badge.prioritas {
+  background-color: #dc3545;
+}
+
+.badge.selesai {
+  background-color: #28a745;
+}
+
+.badge.belum {
+  background-color: #ffc107;
+  color: black;
+}
+
+/* Tombol aksi */
+.aksi button {
+  margin: 0 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.aksi .selesai {
+  background-color: #28a745;
+  color: white;
+}
+
+.aksi .hapus {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ============= TAMBAHAN UNTUK FITUR EDIT ============= */
+/* Tombol Edit */
+.aksi .edit {
+  background-color: #007bff; /* Warna konsisten dengan tombol tambah */
+  color: white;
+}
+
+.aksi .edit:hover {
+  background-color: #0056b3; /* Efek hover konsisten */
+}
+
+/* Form Edit (tersembunyi awal) */
+#form-edit {
+  display: none; /* Hidden by default */
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Style input form edit */
+#form-edit input,
+#form-edit select {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* Tombol di form edit */
+#form-edit button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#form-edit button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsif: Tombol aksi di mobile */
+@media (max-width: 600px) {
+  .aksi button {
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: 12px;
+  }
+}
